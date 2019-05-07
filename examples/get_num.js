@@ -14,7 +14,18 @@ var modem = require('../index.js').Modem();
 modem.open(device, function() {
   console.log("Opened");
 
-  modem.getPhoneNumber(function(args) {
-    console.log("Argumenets:" + args);
+  var number = "";
+
+  modem.getPhoneNumber(function(number) {
+    console.log("Number:" + number);
   });
+
+  if (number === undefined )
+    modem.setPhoneNumber( number, function(newNumber) {
+      console.log("Update number:" + newNumber);
+    });
+  else
+    modem.setPhoneNumber( "+380960619712", function(newNumber) {
+      console.log("New number:" + newNumber);
+    });
 });
