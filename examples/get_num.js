@@ -20,7 +20,7 @@ modem.open(device, function() {
     console.log("Number:" + number);
   });
 
-  if (number === undefined )
+  if (number === null )
     modem.setPhoneNumber( number, function(newNumber) {
       console.log("Update number:" + newNumber);
     });
