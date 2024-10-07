@@ -21,7 +21,7 @@
     "url": "https://github.com/emilsedgh/modem.git"
   },
   "dependencies": {
-    "serialport": "7.1.5",
+    "serialport": "9.0.4",
     "pdu": "1.1.0"
   }
 }
